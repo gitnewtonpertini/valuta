@@ -16,8 +16,8 @@ public class Prova {
         System.out.print("Inserisci il valore da convertire: ");
         importo = sc.nextFloat();
         Valuta v1 = new Valuta("EUR", 1.023f);
-        float x = v1.converti(importo);
-        System.out.println("Il valore in dollari " + x);
+        float v = v1.converti(importo);
+        System.out.println("Il valore in dollari " + v);
 
         // Test del metodo polimorfico: calcolaTassa
         System.out.println("\nTEST TASSA/POLIMORFISMO");
@@ -67,6 +67,8 @@ public class Prova {
         System.out.println("Importo di " + imp.getImporto() + " " + imp.getValuta().getDivisa() 
                 + " = " + c1.cambiaValuta(imp, v4).getImporto() + " " + v4.getDivisa());
 
+        System.out.println("\nTEST USO DELLE DATE");
+        
         sc.close();
     }
 }

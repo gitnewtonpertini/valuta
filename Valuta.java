@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 /**
  * Questa classe rappresenta una valuta monetaria vedi:
  * <a href="../valuta.pdf">valuta.pdf</a>
@@ -8,11 +9,18 @@
 public class Valuta {
   public String divisa;
   public float tasso;
+  private LocalDate dataTasso;
 
   public Valuta(String divisa, float tasso) {
     this.divisa = divisa;
     this.tasso = tasso;
+    // Siccome il metodo now della classe LocalDate è statico
+    // non serve creare una istanza (oggetto) della classe per 
+    // utilizzarlo (https://docs.oracle.com/javase/10/docs/api/java/time/LocalDate.html)
+    this.dataTasso = LocalDate.now();
   }
+
+
 
   /**
    * Costruttore di copia
