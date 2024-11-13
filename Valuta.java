@@ -4,12 +4,21 @@ import java.time.LocalDate;
  * <a href="../valuta.pdf">valuta.pdf</a>
  * 
  * @author 4A ITI a.s. 2024-25
- * @version %I%, %G%
+ * @since ottobre 2024
  */
 public class Valuta {
   public String divisa;
   public float tasso;
-  private LocalDate dataTasso;
+  private LocalDate data;
+
+  public Valuta(String divisa, float tasso, LocalDate dataTasso) {
+    this.divisa = divisa;
+    this.tasso = tasso;
+    // Siccome il metodo now della classe LocalDate è statico
+    // non serve creare una istanza (oggetto) della classe per 
+    // utilizzarlo (https://docs.oracle.com/javase/10/docs/api/java/time/LocalDate.html)
+    this.data = dataTasso;
+  }
 
   public Valuta(String divisa, float tasso) {
     this.divisa = divisa;
@@ -17,10 +26,8 @@ public class Valuta {
     // Siccome il metodo now della classe LocalDate è statico
     // non serve creare una istanza (oggetto) della classe per 
     // utilizzarlo (https://docs.oracle.com/javase/10/docs/api/java/time/LocalDate.html)
-    this.dataTasso = LocalDate.now();
+    this.data = LocalDate.now();
   }
-
-
 
   /**
    * Costruttore di copia
@@ -44,7 +51,7 @@ public class Valuta {
   }
 
   /**
-   * Metodo per la conversione del importo in USD utilizzando il tasso di cambio
+   * Metodo per la conversione dell'importo in USD utilizzando il tasso di cambio
    * predefinito
    * 
    * @param importo

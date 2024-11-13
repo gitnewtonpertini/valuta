@@ -1,3 +1,7 @@
+/**
+ * Classe figlia della classe {@link Valuta} che effettua
+ * l'override (polimorfismo) del metodo {@link Valuta#calcolaTassa}.
+ */
 public class ValutaTaxAsiaAfrica extends Valuta {
 
     public ValutaTaxAsiaAfrica(String divisa, float tasso) {

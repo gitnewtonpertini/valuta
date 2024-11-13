@@ -3,10 +3,10 @@ import java.util.Scanner;
 /**
  * Classe di test per l'applicazione Valuta
  * 
- * @author 4A ITI
+ * @author 4A ITI a.s. 2024-25
  * @since ottobre 2024
  */
-public class Prova {
+public class Test {
     public static void main(String args[]) {
         float importo;
 

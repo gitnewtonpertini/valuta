@@ -1,3 +1,11 @@
+/**
+ * Questa classe rappresenta un importo monetario espresso nella
+ * relativa vauta e riferito ad una determinata data-ora-zona (stato):
+ * <a href="../valuta.pdf">valuta.pdf</a>
+ * 
+ * @author 4A ITI a.s. 2024-25
+ * @since ottobre 2024
+ */
 public class Importo  {
     float importo;
     Valuta valuta;

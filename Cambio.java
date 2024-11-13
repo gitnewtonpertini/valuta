@@ -1,7 +1,8 @@
 /**
  * Questa classe fornisce alcuni metodi di servizio per effettuare il cambio
  * tra valute diverse
- * @author 4D ITI 
+ * 
+ * @author 4D ITI a.s. 2024-25 
  * @since ottobre 2024
  */
 public class Cambio {
